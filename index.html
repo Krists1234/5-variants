@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<title>Liepāja – informatīvais ekrāns</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+margin: 0;
+background: linear-gradient(135deg, #5a1a2a, #8b2d4d); /* tumši rozā */
+background-size: 400% 400%;
+animation: bgMove 180s ease-in-out infinite;
+color: #ffffff;
+font-family: "Segoe UI", Arial, sans-serif;
+height: 100vh;
+overflow: hidden;
+}
+
+@keyframes bgMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.container {
+display: grid;
+grid-template-rows: auto 1fr auto;
+height: 100vh;
+padding: 40px;
+box-sizing: border-box;
+animation: drift 120s linear infinite alternate;
+}
+
+@keyframes drift {
+from { transform: translate(0px, 0px); }
+to { transform: translate(20px, 15px); }
+}
+
+.main {
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+gap: 40px;
+}
+
+.time {
+font-size: 120px; /* palielināts */
+font-weight: 700;
+animation: pulse 12s ease-in-out infinite;
+}
+
+.date {
+font-size: 40px; /* palielināts */
+opacity: 0.9;
+}
+
+.holiday, .nameday, .moonphase {
+margin-top: 15px;
+font-size: 30px;
+color: #ffd966;
+}
+
+.weather {
+text-align: right;
+animation: pulse 14s ease-in-out infinite;
+}
+
+.temp {
+font-size: 90px; /* palielināts */
+font-weight
